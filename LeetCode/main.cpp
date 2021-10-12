@@ -5,12 +5,12 @@
 //  Created by 何皓源 on 2021/10/2.
 //
 
-#include <iostream>
-#include "MyArray.hpp"
-#include "MyLinkedList.hpp"
+#include "Array.hpp"
+#include "List.hpp"
+#include "HashTable.hpp"
 
-void testLinkedList() {
-  LinkedList* obj = new LinkedList();
+void testList() {
+  List* obj = new List();
   obj->addAtHead(1);
   obj->addAtTail(1);
   obj->addAtTail(2);
@@ -26,7 +26,12 @@ void testLinkedList() {
   delete obj;
 }
 
+void testHashTable(){
+  
+}
+
 int main(int argc, const char * argv[]) {
-  testLinkedList();
+//  testList();
+  testHashTable();
   return 0;
 }

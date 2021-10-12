@@ -1,21 +1,14 @@
 //
-//  MyArray.hpp
+//  Array.hpp
 //  LeetCode
 //
 //  Created by 何皓源 on 2021/10/10.
 //
 
-#ifndef MyArray
-#define MyArray
+#ifndef Array
+#define Array
 
-#include <vector>
-#include <string>
-#include <unordered_map>
-
-using std::vector;
-using std::string;
-using std::swap;
-using std::unordered_map;
+#include "Common.hpp"
 
 // 704
 int search(vector<int>& nums, int target) {
@@ -415,4 +408,4 @@ vector<vector<int>> generateMatrix(int n) {
   return result;
 }
 
-#endif /* MyArray */
+#endif /* Array */

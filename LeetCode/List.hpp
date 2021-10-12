@@ -1,12 +1,14 @@
 //
-//  MyLinkedList.hpp
+//  List.hpp
 //  LeetCode
 //
 //  Created by 何皓源 on 2021/10/2.
 //
 
-#ifndef MyLinkedList
-#define MyLinkedList
+#ifndef LinkedList
+#define LinkedList
+
+#include "Common.hpp"
 
 // 707
 class Node {
@@ -23,12 +25,12 @@ public:
   Node* next;
 };
 
-class LinkedList {
+class List {
 public:
-  LinkedList() {
+  List() {
     head_ = nullptr;
   }
-  LinkedList(LinkedList& aList) {
+  List(List& aList) {
     while (head_) {
       delete head_;
       head_ = head_->next;
@@ -36,7 +38,7 @@ public:
     head_ = aList.getHead();
   }
   
-  ~LinkedList() {
+  ~List() {
     while (head_) {
       delete head_;
       head_ = head_->next;
@@ -115,10 +117,10 @@ public:
   void displayList() {
     Node* cur = head_;
     while (cur) {
-      std::cout << cur->val << ' ';
+      cout << cur->val << ' ';
       cur = cur->next;
     }
-    std::cout << '\n';
+    cout << '\n';
   }
   
   // 206
@@ -196,7 +198,7 @@ public:
     return size;
   }
   
-  Node* getInterNode(LinkedList& aList) {
+  Node* getInterNode(List& aList) {
     int sizeA = this->getSize();
     int sizeB = aList.getSize();
     Node* curA = head_;
@@ -244,7 +246,7 @@ private:
   Node* head_;
 };
 
-#endif /* MyLinkedList */
+#endif /* LinkedList */
 
 //  设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val 和 next。val 是当前节点的值，next
 //  是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性 prev 以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。
